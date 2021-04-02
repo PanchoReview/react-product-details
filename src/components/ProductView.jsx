@@ -15,13 +15,19 @@ export default class ProductView extends Component {
         currentColor: 0
     }
 
+    changeCurrentColor = selectedColor => {
+        console.log(selectedColor)
+        
+        this.setState({currentColor: selectedColor })
+    }
+
     render() {
         const color = ProductData.colorOptions[this.state.currentColor]
 
         return(
             <div className="ProductView" style={styles}>
                 <ProductImagePreview imageUrl={color.imageUrl} styleName={color.styleName}  />    
-                <ProductInfo product={ProductData} currentColorIndex={this.state.currentColor} />
+                <ProductInfo product={ProductData} currentColorIndex={this.state.currentColor} changeCurrentColor={this.changeCurrentColor} />
             </div>
             
         )

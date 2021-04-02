@@ -15,13 +15,17 @@ const styles = {
 
 export default class ProductInfo extends Component {
     render() {
-        const { product, currentColorIndex } = this.props
+        const { product, currentColorIndex, changeCurrentColor } = this.props
 
         return(
             <div style={styles.productInfo}>
                 <h1>{product.title}</h1>
                 <p style={styles.description}>{product.description}</p>
-                <ProductColorSelector colorOptions={product.colorOptions} currentColorIndex={currentColorIndex} />
+                <ProductColorSelector 
+                    colorOptions={product.colorOptions} 
+                    currentColorIndex={currentColorIndex} 
+                    changeCurrentColor={changeCurrentColor}
+                />
             </div>
         )
     }

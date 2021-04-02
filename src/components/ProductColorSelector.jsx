@@ -10,7 +10,9 @@ const styles = {
             width: "20%",
             height: "20%",
             display: "inline-block",
-            border: isSelected ? "2px solid red" : ""
+            border: isSelected ? "2px solid green" : "",
+            borderRadius: isSelected ? "20%" : "",
+            boxSizing: "border-box"
         }        
     },
     img: {
@@ -21,7 +23,16 @@ const styles = {
 
 export default class ProductColorSelector extends Component {
     render() {
-        const { colorOptions, currentColorIndex } = this.props
+        const { colorOptions, currentColorIndex, changeCurrentColor } = this.props
+
+        const onMouseOver = e => {
+            console.log("on mouse over detected")            
+        }
+
+        const onClick = option => () => {
+            console.log("clicked", option)
+            changeCurrentColor(option)
+        }
 
         return(
             <div class="color-selector">
@@ -34,7 +45,9 @@ export default class ProductColorSelector extends Component {
                             const isSelected = index == currentColorIndex
 
                             return <li key={index} style={styles.imgWrapper(isSelected)}>
-                                <img src={option.imageUrl} alt={option.styleName} style={styles.img}></img>
+                                    <img src={option.imageUrl} alt={option.styleName} style={styles.img}
+                                        onMouseOver={onMouseOver} onClick={onClick(index)}
+                                    />
                             </li>
                         })
                     }    
