@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import NavBar from './components/NavBar.jsx';
 import ProductView from './components/ProductView';
 

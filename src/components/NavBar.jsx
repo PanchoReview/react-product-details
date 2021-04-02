@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 
 const styles = {
     navBar: {
-        position: "fixed",
-        width: "100%",
-        height: "60px",
-        backgroundColor: "blue",
-        color: "white"
+        overflow: "hidden",
+        backgroundColor: "#333",
+        position: "fixed", /* Set the navbar to fixed position */
+        top: "0", /* Position the navbar at the top of the page */
+        width: "100%" /* Full width */
     },
     title: {
         textAlign: "center",

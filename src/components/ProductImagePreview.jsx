@@ -5,7 +5,6 @@ const styles = {
         width: "40%",    
         float: "left",
         padding: "20px",
-        border: "2px solid black"
             
     },
     image: {
