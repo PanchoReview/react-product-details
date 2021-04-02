@@ -1,0 +1,35 @@
+.FeaturesList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.FeatureListItem {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.FeatureBadge {
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.FeatureBadgeSelected {
+    background-color: #b2b2b2;
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}

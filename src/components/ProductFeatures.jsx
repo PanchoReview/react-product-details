@@ -1,31 +1,5 @@
 import React, { Component } from 'react'
-
-const styles = {
-    list: {
-        listStyleType: "none",
-        paddingLeft: "0"
-    },
-    listItem: {
-        display: "inline-block",
-        boxSizing: "border-box"
-    },
-    feature: index => {
-        const isOdd = index % 2 === 0
-
-        return {
-            backgroundColor: isOdd ? "#b2b2b2" : "#f0f0f0",
-            color: isOdd ? "white" : "black",
-            borderRadius: "20px",
-            height: "40px",
-            width: "120px",
-            marginRight: "10px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontWeight: "700"
-        }
-    }
-}
+import classes from './modules/ProductFeatures.module.css'
 
 export default class ProductFeatures extends Component {
     render() {
@@ -34,11 +8,11 @@ export default class ProductFeatures extends Component {
         return(
             <div>
                 <h2>Features</h2>
-                <ul style={styles.list}>
+                <ul className={classes.FeaturesList}>
                     {
                         features.map((feature, index) => {
-                            return <li key={index} style={styles.listItem}>
-                                <div style={styles.feature(index)}>{feature}</div>
+                            return <li className={classes.FeatureListItem} key={index}>
+                                <div className={classes.FeatureBadge}>{feature}</div>
                             </li>
                         })
                     }    

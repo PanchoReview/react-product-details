@@ -1,0 +1,26 @@
+.ImageList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ImageWrapper {
+    width: 20%;
+    height: 20%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.ImageWrapperSelected {
+    width: 20%;
+    height: 20%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid green;
+    border-radius: 20%;
+}
+
+.Image {
+    max-height: 100%;
+    max-width: 100%;
+    cursor: pointer;
+}

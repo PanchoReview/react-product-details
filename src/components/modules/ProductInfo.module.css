@@ -1,0 +1,9 @@
+.ProductInfo {
+    width: 50%;    
+    float: left;
+    padding: 20px;
+}
+
+.Description {
+    margin-bottom: 30px;
+}

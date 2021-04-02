@@ -1,0 +1,10 @@
+.ProductImagePreview {
+    width: 40%;    
+    float: left;
+    padding: 20px;
+}
+
+.Image {
+    max-height: 100%;
+    max-width: 100%;
+}
