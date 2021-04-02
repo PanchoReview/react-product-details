@@ -18,6 +18,19 @@ export default class ProductView extends Component {
         this.setState({ currentFeature: selectedFeature })
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        const currentColorChanged = nextState.currentColor !== this.state.currentColor
+        const currentFeatureChanged = nextState.currentFeature !==  this.state.currentFeature
+
+        if (currentColorChanged || currentFeatureChanged) {
+            console.log("color or feature changed")
+            return true
+        }
+
+        return false
+
+    }
+
     render() {
         const color = ProductData.colorOptions[this.state.currentColor]
 
