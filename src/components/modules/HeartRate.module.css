@@ -1,7 +1,8 @@
 .HeartRate {
-    z-index: 1;
-    position: absolute;
-    top: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 .HeartbeatIcon {
@@ -13,7 +14,7 @@
 }
 
 .HeartbeatText {
-    color: darkolivegreen;
+    color: white;
     font-size: 50px;
     margin: 0;
     text-align: center;
