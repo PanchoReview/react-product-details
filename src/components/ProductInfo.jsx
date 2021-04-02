@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ProductColorSelector from './ProductColorSelector'
+import ProductFeatures from './ProductFeatures'
 
 const styles = {
     productInfo: {
@@ -25,7 +26,8 @@ export default class ProductInfo extends Component {
                     colorOptions={product.colorOptions} 
                     currentColorIndex={currentColorIndex} 
                     changeCurrentColor={changeCurrentColor}
-                />
+                />                
+                <ProductFeatures features={product.featureList} />
             </div>
         )
     }

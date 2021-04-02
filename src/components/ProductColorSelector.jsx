@@ -42,7 +42,7 @@ export default class ProductColorSelector extends Component {
                     {
                         colorOptions.map((option, index) => {
                             console.log(option, index)
-                            const isSelected = index == currentColorIndex
+                            const isSelected = index === currentColorIndex
 
                             return <li key={index} style={styles.imgWrapper(isSelected)}>
                                     <img src={option.imageUrl} alt={option.styleName} style={styles.img}
