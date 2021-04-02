@@ -4,8 +4,8 @@ import ProductImagePreview from './ProductImagePreview'
 
 const styles = {
     width: "70%",
-    display: "flex",
-    justifyContent: "center"    
+    border: "3px solid #fff",
+    padding: "20px"
 }
 
 export default class ProductView extends Component {

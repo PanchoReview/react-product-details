@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 
 const styles = {
     productPreview: {
-        width: "40%",        
+        width: "40%",    
+        float: "left",
+        padding: "20px",
+        border: "2px solid black"
+            
     },
     image: {
-        display: "block",
         maxHeight: "100%",
         maxWidth: "100%"
     }
