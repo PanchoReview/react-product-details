@@ -15,9 +15,7 @@ export default class ProductView extends Component {
         currentColor: 0
     }
 
-    changeCurrentColor = selectedColor => {
-        console.log(selectedColor)
-        
+    changeCurrentColor = selectedColor => {        
         this.setState({currentColor: selectedColor })
     }
 

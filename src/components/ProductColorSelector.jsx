@@ -17,7 +17,8 @@ const styles = {
     },
     img: {
         maxHeight: "100%",
-        maxWidth: "100%"
+        maxWidth: "100%",
+        cursor: "pointer",
     }
 }
 
@@ -25,12 +26,7 @@ export default class ProductColorSelector extends Component {
     render() {
         const { colorOptions, currentColorIndex, changeCurrentColor } = this.props
 
-        const onMouseOver = e => {
-            console.log("on mouse over detected")            
-        }
-
         const onClick = option => () => {
-            console.log("clicked", option)
             changeCurrentColor(option)
         }
 
@@ -41,12 +37,11 @@ export default class ProductColorSelector extends Component {
                 <ul style={styles.imgList}>
                     {
                         colorOptions.map((option, index) => {
-                            console.log(option, index)
                             const isSelected = index === currentColorIndex
 
                             return <li key={index} style={styles.imgWrapper(isSelected)}>
                                     <img src={option.imageUrl} alt={option.styleName} style={styles.img}
-                                        onMouseOver={onMouseOver} onClick={onClick(index)}
+                                        onClick={onClick(index)}
                                     />
                             </li>
                         })

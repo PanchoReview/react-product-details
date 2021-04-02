@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import BuyButton from './BuyButton'
 import ProductColorSelector from './ProductColorSelector'
 import ProductFeatures from './ProductFeatures'
 
@@ -28,6 +29,7 @@ export default class ProductInfo extends Component {
                     changeCurrentColor={changeCurrentColor}
                 />                
                 <ProductFeatures features={product.featureList} />
+                <BuyButton />
             </div>
         )
     }
