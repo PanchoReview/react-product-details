@@ -8,3 +8,23 @@
     max-height: 100%;
     max-width: 100%;
 }
+
+.HeartRate {
+    z-index: 1;
+    position: absolute;
+    top: 65%;
+}
+
+.HeartbeatIcon {
+    width: 15%;
+    height: 15%;
+    display: block;
+    margin: auto;
+}
+
+.HeartbeatText {
+    color: darkolivegreen;
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+}

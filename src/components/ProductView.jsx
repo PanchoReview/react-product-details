@@ -6,11 +6,16 @@ import classes from './modules/ProductView.module.css'
 
 export default class ProductView extends Component {
     state = {
-        currentColor: 0
+        currentColor: 0,
+        currentFeature: 0
     }
 
     changeCurrentColor = selectedColor => {        
         this.setState({currentColor: selectedColor })
+    }
+
+    changeCurrentFeature = selectedFeature => {
+        this.setState({ currentFeature: selectedFeature })
     }
 
     render() {
@@ -18,8 +23,16 @@ export default class ProductView extends Component {
 
         return(
             <div className={classes.ProductView}>
-                <ProductImagePreview imageUrl={color.imageUrl} styleName={color.styleName}  />    
-                <ProductInfo product={ProductData} currentColorIndex={this.state.currentColor} changeCurrentColor={this.changeCurrentColor} />
+                <ProductImagePreview 
+                    imageUrl={color.imageUrl} styleName={color.styleName}  
+                    currentFeatureIndex={this.state.currentFeature}
+                />    
+                <ProductInfo product={ProductData} 
+                    currentColorIndex={this.state.currentColor} 
+                    changeCurrentColor={this.changeCurrentColor} 
+                    currentFeatureIndex={this.state.currentFeature}
+                    changeCurrentFeature={this.changeCurrentFeature}
+                />
             </div>
             
         )

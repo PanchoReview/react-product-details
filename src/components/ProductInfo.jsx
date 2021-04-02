@@ -6,7 +6,7 @@ import classes from './modules/ProductInfo.module.css'
 
 export default class ProductInfo extends Component {
     render() {
-        const { product, currentColorIndex, changeCurrentColor } = this.props
+        const { product, currentColorIndex, changeCurrentColor, currentFeatureIndex, changeCurrentFeature } = this.props
 
         return(
             <div className={classes.ProductInfo} >
@@ -17,7 +17,11 @@ export default class ProductInfo extends Component {
                     currentColorIndex={currentColorIndex} 
                     changeCurrentColor={changeCurrentColor}
                 />                
-                <ProductFeatures features={product.featureList} />
+                <ProductFeatures 
+                    features={product.featureList} 
+                    currentFeatureIndex={currentFeatureIndex}
+                    changeCurrentFeature={changeCurrentFeature} 
+                />
                 <BuyButton />
             </div>
         )

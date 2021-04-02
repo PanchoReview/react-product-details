@@ -10,7 +10,7 @@ export default class ProductColorSelector extends Component {
         }
 
         return(
-            <div class="color-selector">
+            <div className="color-selector">
                 <h2>Select Color</h2>
 
                 <ul className={classes.ImageList}>

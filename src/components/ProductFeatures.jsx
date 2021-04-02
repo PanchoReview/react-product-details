@@ -3,7 +3,10 @@ import classes from './modules/ProductFeatures.module.css'
 
 export default class ProductFeatures extends Component {
     render() {
-        const { features } = this.props
+        const { features, currentFeatureIndex, changeCurrentFeature } = this.props
+        const onClick = feature => () => {
+            changeCurrentFeature(feature)
+        }
 
         return(
             <div>
@@ -11,8 +14,11 @@ export default class ProductFeatures extends Component {
                 <ul className={classes.FeaturesList}>
                     {
                         features.map((feature, index) => {
+                            const isSelected = index === currentFeatureIndex
+                            const featureBadgeClass = isSelected ? classes.FeatureBadgeSelected : classes.FeatureBadge
+
                             return <li className={classes.FeatureListItem} key={index}>
-                                <div className={classes.FeatureBadge}>{feature}</div>
+                                <div className={featureBadgeClass} onClick={onClick(index)}>{feature}</div>
                             </li>
                         })
                     }    
